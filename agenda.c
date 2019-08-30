@@ -19,7 +19,7 @@ int main() {
 
     space *second;
 
-    printf("Teste\n\n");
+    printf("Teste");
     second = begin();
     add(second);
     print(second);
@@ -43,10 +43,13 @@ void add(space *first) {
 
     space *new;
     char *nome;
+    char vetor[100];
     int numero;
-    
+
+
+    nome = &vetor[0];
     printf("\nDigite o nome: ");
-    fgets(nome, 100, stdin);
+    fgets(vetor, 100, stdin);
     printf("\nDigite o telefone: ");
     scanf("%d", &numero);
     new = (space *) malloc(sizeof(space));
